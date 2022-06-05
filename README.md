@@ -1,32 +1,21 @@
-# New Project Template
+# STE tools
 
-This repository contains a template that can be used to seed a repository for a
-new Google open source project.
+This repository contains following:
+1. Tools, scripts and knowledge materials that can be used by Engineers
+2. Engineers can get hands-on on any test tool, and use this repository to experiment and play around
 
-See [go/releasing](http://go/releasing) (available externally at
-https://opensource.google/docs/releasing/) for more information about
-releasing a new Google open source project.
-
-This template uses the Apache license, as is Google's default.  See the
-documentation for instructions on using alternate license.
-
-## How to use this template
+## How to use
 
 1. Clone it from GitHub.
-    * There is no reason to fork it.
-1. Create a new local repository and copy the files from this repo into it.
-1. Modify README.md and docs/contributing.md to represent your project, not the
-   template project.
-1. Develop your new project!
+2. Stage your changes
+3. Push
+
 
 ``` shell
 git clone https://github.com/google/new-project
-mkdir my-new-thing
-cd my-new-thing
-git init
-cp -r ../new-project/* ../new-project/.github .
+--- Make Chnages
 git add *
-git commit -a -m 'Boilerplate for new Google open source project'
+git commit -a -m 'New script to clean'
 ```
 
 ## Source Code Headers
