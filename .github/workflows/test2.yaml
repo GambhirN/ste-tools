@@ -10,9 +10,8 @@ on:
 jobs:
   bash-example:
     runs-on: ubuntu-latest
-
     outputs:
-      is_flag: $$ {{ steps.test.outputs.is_flag }}
+      is_flag: $${{ steps.test.outputs.is_flag }}
     steps:
       - name: Group of log lines
         id: test
@@ -20,8 +19,7 @@ jobs:
             echo "::group::My title"
             echo "Inside group"
             echo "::endgroup::"
-            echo "is_flag=hello" >> $GITHUB_OUTPUT
-            echo "is_flag=${{ steps.test.outputs.is_flag }}"
+            echo "is_flag=hello" >> "$GITHUB_OUTPUT"
 
   bash-example-2:
     runs-on: ubuntu-latest
@@ -31,5 +29,5 @@ jobs:
         id: test2
         run: |
             echo "::group::My title"
-            echo "is_flag=${{needs.bash-example.test.outputs.is_flag}}"
+            echo "is_flag=${{needs.bash-example.outputs.is_flag}}"
 
