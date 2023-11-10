@@ -19,7 +19,7 @@ jobs:
             echo "::group::My title"
             echo "Inside group"
             echo "::endgroup::"
-            echo "is_flag=hello" >> "$GITHUB_OUTPUT"
+            echo "is_flag=true" >> "$GITHUB_OUTPUT"
             echo "is_flag=${{needs.bash-example.outputs.is_flag}}"
 
   bash-example-2:
