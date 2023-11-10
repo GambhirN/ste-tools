@@ -3,9 +3,16 @@ name: test yaml
 jobs:
   bash-example:
     runs-on: ubuntu-latest
+
+    outputs:
+      is_flag: $$ {{ steps.test.outputs.is_flag }}
     steps:
       - name: Group of log lines
+        id: test
         run: |
             echo "::group::My title"
             echo "Inside group"
             echo "::endgroup::"
+            echo "name=is_flag::true" >> $GITHUB_OUTPUT
+            echo "is_flag=${{ steps.test.outputs.is_flag }}"
+
