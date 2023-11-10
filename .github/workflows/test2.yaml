@@ -20,6 +20,6 @@ jobs:
             echo "::group::My title"
             echo "Inside group"
             echo "::endgroup::"
-            echo "name=is_flag::true" >> $GITHUB_OUTPUT
+            echo "is_flag=true" >> $GITHUB_OUTPUT
             echo "is_flag=${{ steps.test.outputs.is_flag }}"
 
