@@ -17,8 +17,9 @@ jobs:
         id: test
         run: |
             echo "::endgroup:: $(pwd)"
-            pwd
+            ls -altr
             #echo "is_flag=true" >> "$GITHUB_OUTPUT"
+            chmod +x ./test.sh
             ./test.sh
 
   bash-example-2:
