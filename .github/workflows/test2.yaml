@@ -18,9 +18,10 @@ jobs:
         run: |
             echo "::endgroup:: $(pwd)"
             ls -altr
+            pwd
             #echo "is_flag=true" >> "$GITHUB_OUTPUT"
-            chmod +x ./test.sh
-            ./test.sh
+            #chmod +x ./test.sh
+            #./test.sh
 
   bash-example-2:
     runs-on: ubuntu-latest
