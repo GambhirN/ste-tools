@@ -1,1 +1,1 @@
-echo "is_flag=hellonaga" >> "$GITHUB_OUTPUT"
+echo "name=is_flag::hellonaga" >> "$GITHUB_OUTPUT"
