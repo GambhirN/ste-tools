@@ -1,0 +1,1 @@
+echo "is_flag=true" >> "$GITHUB_OUTPUT"
