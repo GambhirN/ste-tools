@@ -28,8 +28,6 @@ jobs:
     steps:
       - env:
           OUTPUT1: ${{needs.bash-example.outputs.is_flag}}
-      - name: Print
-        id: test2
         run: |
             echo "::group::My title"
             echo "is_flag= $OUTPUT1"
