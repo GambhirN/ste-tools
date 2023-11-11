@@ -37,5 +37,5 @@ jobs:
 
         run: |
             echo "group::Mytitle"
-            echo "$OUTPUT1 $OUTPUT2"
+            echo "$OUTPUT1 $OUTPUT2 $OUTPUT3"
 
