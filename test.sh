@@ -1,1 +1,1 @@
-echo "is_flag=true" >> "$GITHUB_OUTPUT"
+echo "is_flag=hellonaga" >> "$GITHUB_OUTPUT"
