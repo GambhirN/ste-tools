@@ -11,7 +11,10 @@ jobs:
   bash-example:
     runs-on: ubuntu-latest
     outputs:
-      is_flag: $${{ steps.test.outputs.is_flag }}
+      is_avlo_requirements: $${{ steps.test.outputs.is_avlo_requirements }}
+      is_avlo_testcases: $${{ steps.test.outputs.is_avlo_testcases }}
+      system_path: $${{ steps.test.outputs.system_path }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -28,8 +31,11 @@ jobs:
     needs: bash-example
     steps:
       - env:
-          OUTPUT1: ${{needs.bash-example.outputs.is_flag}}
+          OUTPUT1: ${{needs.bash-example.outputs.is_avlo_requirements}}
+          OUTPUT2: ${{needs.bash-example.outputs.is_avlo_testcases}}
+          OUTPUT3: ${{needs.bash-example.outputs.system_path}}
+
         run: |
             echo "::group::My title"
-            echo "$OUTPUT1"
+            echo "$OUTPUT1 $OUTPUT2 $OUTPUT3"
 
