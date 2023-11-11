@@ -13,6 +13,9 @@ jobs:
     outputs:
       is_flag: $${{ steps.test.outputs.is_flag }}
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Group of log lines
         id: test
         run: |
@@ -20,8 +23,8 @@ jobs:
             ls
             pwd
             # echo "is_flag=true" >> "$GITHUB_OUTPUT"
-            # chmod +x ./test.sh
-            # ./test.sh
+            chmod +x ./test.sh
+            ./test.sh
 
   bash-example-2:
     runs-on: ubuntu-latest
