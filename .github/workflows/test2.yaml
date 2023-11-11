@@ -36,6 +36,6 @@ jobs:
           OUTPUT3: ${{needs.bash-example.outputs.system_path}}
 
         run: |
-            echo "group::My title"
-            echo "$OUTPUT1 $OUTPUT2 $OUTPUT3"
+            echo "group::Mytitle"
+            echo "$OUTPUT1 $OUTPUT2"
 
