@@ -16,7 +16,7 @@ jobs:
       - name: Group of log lines
         id: test
         run: |
-            echo "::endgroup::"
+            echo "::endgroup:: $(pwd)"
             #echo "is_flag=true" >> "$GITHUB_OUTPUT"
             ./test.sh
 
